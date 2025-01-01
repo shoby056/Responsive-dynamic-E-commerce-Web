@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-
+import Image from "next/image";
 import Header from "../header/page";
 import Footer from "../footer/page";
 
@@ -89,11 +89,11 @@ export default function EcommerceSite() {
       {/* Product Details */}
       {selectedProduct ? (
         <div className="bg-white p-6 mt-6 rounded-lg shadow-lg border border-gray-200">
-          <img
+          <Image
             src={selectedProduct.image}
             alt={selectedProduct.name}
             className="w-full h-64 object-cover rounded-lg mb-4"
-          />
+         / >
           <h2 className="text-3xl font-semibold">{selectedProduct.name}</h2>
           <p className="mt-2 text-lg">{selectedProduct.description}</p>
           <p className="mt-4 text-xl font-bold text-gray-800">${selectedProduct.price}</p>
@@ -119,7 +119,7 @@ export default function EcommerceSite() {
               key={product.id}
               className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-2xl transition"
             >
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover rounded-lg mb-4"
