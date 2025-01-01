@@ -22,7 +22,7 @@ export default function EcommerceSite() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products"); // Replace with your API endpoint
+        const response = await fetch("https://fakestoreapi.com/products"); 
         const data = await response.json();
         const formattedData: Product[] = data.map((item: any) => ({
           id: item.id,
@@ -72,7 +72,7 @@ export default function EcommerceSite() {
 
       {/* Shopping Cart */}
       <div className="bg-white h-[300px] p-6 mt-6 rounded-lg shadow-lg border border-gray-200">
-        <h2 className="text-2xl font-semibold">Shopping Cart</h2>
+        <h2 className="text-2xl text-black font-semibold">Shopping Cart</h2>
         <ul className="list-none mt-4 space-y-2">
           {cart.map((item, index) => (
             <li key={index} className="flex justify-between">
@@ -81,7 +81,7 @@ export default function EcommerceSite() {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-xl font-bold text-gray-700">
+        <p className="mt-4 text-xl font-bold text-black">
           Total: ${cart.reduce((total, item) => total + item.price, 0)}
         </p>
       </div>
@@ -96,9 +96,9 @@ export default function EcommerceSite() {
             height={256}
             className="w-full h-64 object-cover rounded-lg mb-4"
          / >
-          <h2 className="text-3xl font-semibold">{selectedProduct.name}</h2>
-          <p className="mt-2 text-lg">{selectedProduct.description}</p>
-          <p className="mt-4 text-xl font-bold text-gray-800">${selectedProduct.price}</p>
+          <h2 className="text-3xl text-black font-semibold">{selectedProduct.name}</h2>
+          <p className="mt-2 text-black text-lg">{selectedProduct.description}</p>
+          <p className="mt-4 text-xl font-bold text-black">${selectedProduct.price}</p>
           <div className="mt-6 flex space-x-4">
             <button
               onClick={() => handleAddToCart(selectedProduct)}
@@ -128,8 +128,8 @@ export default function EcommerceSite() {
                 height={192}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-semibold">{product.name}</h3>
-              <p className="mt-2 text-lg font-bold text-gray-800">${product.price}</p>
+              <h3 className="text-xl text-black font-semibold">{product.name}</h3>
+              <p className="mt-2 text-lg font-bold text-black">${product.price}</p>
               <div className="mt-4 space-x-4">
                 <button
                   onClick={() => handleViewDetails(product.id)}
