@@ -92,6 +92,8 @@ export default function EcommerceSite() {
           <Image
             src={selectedProduct.image}
             alt={selectedProduct.name}
+            width={500}
+            height={256}
             className="w-full h-64 object-cover rounded-lg mb-4"
          / >
           <h2 className="text-3xl font-semibold">{selectedProduct.name}</h2>
@@ -122,6 +124,8 @@ export default function EcommerceSite() {
               <Image
                 src={product.image}
                 alt={product.name}
+                width={500}
+                height={192}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-semibold">{product.name}</h3>
